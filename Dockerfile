@@ -14,6 +14,7 @@ RUN apt-get update && \
         rsync \
         dpkg-sig \
         apt-transport-https \
+        scrypt \
         jfrog-cli && \
     apt-get -y dist-upgrade && \
     apt-get clean && \
