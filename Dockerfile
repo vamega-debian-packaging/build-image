@@ -15,17 +15,8 @@ RUN apt-get update && \
         dpkg-sig \
         apt-transport-https \
         scrypt \
-        jfrog-cli && \
-    apt-get -y dist-upgrade && \
-    apt-get clean && \
-    rm -f /var/lib/apt/lists/* ; \
-    rm -f /var/lib/apt/lists/partial/*
-
-RUN gem install fpm
-
-# Python packaging dependencies
-RUN apt-get update && \
-    apt-get -y install \
+        jfrog-cli  \
+        # Python packaging dependencies
         python \
         python-setuptools \
         python-pip \
@@ -34,3 +25,5 @@ RUN apt-get update && \
     apt-get clean && \
     rm -f /var/lib/apt/lists/* ; \
     rm -f /var/lib/apt/lists/partial/*
+
+RUN gem install fpm
