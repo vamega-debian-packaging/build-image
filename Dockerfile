@@ -9,7 +9,7 @@ RUN apt-get update && \
         gnupg2 \
         rubygems-integration \
         ruby-dev \
-            ruby \
+        ruby \
         build-essential \
         rsync \
         dpkg-sig \
